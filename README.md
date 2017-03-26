@@ -11,7 +11,7 @@ what the air pollution is, sun hours etc.
 This repository contains just the code to display the data on the map.
 
 The code that streams the data to http://streammyiot.com/ is located in the following
-[repository](https://github.com/afk/edison-environment-service)
+[repository](https://github.com/afk/edison-environment-client)
 
 ## Launching this project
 Prerequisite is node.js on your machine. After that you need to do the following things
