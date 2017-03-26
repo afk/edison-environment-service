@@ -2,9 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Edison Environment Service</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2/jquery.min.js"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+
 </head>
 <body>
-$END$
+<div id="map"></div>
+
+<div class="range">
+    <form class="form-inline" id="form">
+        <input name="daterange" class="form-control" style="width: 300px"/>
+
+        <select name="devices" id="devices" class="form-control">
+            <option value="">all</option>
+        </select>
+        <select name="components" id="components" class="form-control">
+            <option value="">all</option>
+        </select>
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script type="text/javascript" src="index.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
 </body>
 </html>

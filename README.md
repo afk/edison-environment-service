@@ -29,3 +29,6 @@ Thanks to WHD.global for having us at the WHD.Hackatlon 2017
 
 Thanks to Intel for providing us with the Edison Kits and to 1and1 for providing us with the
 necessary servers to play with the service.
+
+## Please note!!!
+This is not a finished product. It's just something that we managed to hack in a day. Use at your own risk!
