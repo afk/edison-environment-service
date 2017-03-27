@@ -3,6 +3,8 @@ var api = require('./api');
 var express = require('express');
 var app = express();
 
+var path = require('path');
+
 var credentials = require('./credentials')
 
 var username = credentials.username;
@@ -95,6 +97,18 @@ function launchServer() {
         next();
     });
 
+    app.get('/', function(req, res) {
+        res.sendFile(path.join(__dirname + '/index.html'));
+    });
+
+    app.get('/index.js', function(req, res) {
+        res.sendFile(path.join(__dirname + '/index.js'));
+    });
+
+    app.get('/css/style.css', function(req, res) {
+        res.sendFile(path.join(__dirname + '/css/style.css'));
+    });
+
     app.get('/devices', function (req, res) {
         api.device.getDeviceList(accountId, apiToken, function(apiError, apiResponse) {
             res.json(apiResponse);
@@ -114,7 +128,7 @@ function launchServer() {
     });
 
 
-    app.listen(8082, function () {
+    app.listen(80, function () {
         console.log('Edison Environment server is listening 8082!');
     });
 }
