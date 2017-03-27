@@ -87,7 +87,7 @@ $(document).ready(function () {
     });
 
     // Get the list of devices for the select fields
-    fetch('http://localhost:8082/devices')
+    fetch('/devices')
         .then(function (response) {
             if (response.status >= 400 && response.status < 600) {
                 throw new Error("Bad response from server");
@@ -148,7 +148,7 @@ function getDropDownList(name, id, optionList) {
  */
 function fetchData() {
     var daterange = $('input[name="daterange"]').data('daterangepicker');
-    fetch('http://localhost:8082/data?' + $.param({
+    fetch('/data?' + $.param({
             start: moment(daterange.startDate).unix() * 1000,
             end: moment(daterange.endDate).unix() * 1000,
             component: $('#components').val(),
